@@ -1,0 +1,78 @@
+.about-container{
+	width: 980px;
+	height: 545px;
+	margin: 20px auto;
+}
+.about-left-container{
+	width: 240px;
+	height: 100%;
+	float: left;
+}
+.about-right-container{
+	width: 720px;
+	height: 100%;
+	margin-left: 20px;
+	background-color: #f1f1f1;
+	border-radius: 0 0 10px 10px;
+	float: left;
+}
+.left-title{
+	width: 100%;
+	height: 40px;
+	background-color: #00a0e9;
+	color: #fff;
+	line-height: 2;
+}
+.left-title span{
+	display: inline-block;
+}
+.left-CN{
+	font-size: 20px;
+	padding-left: 20px;
+}
+.left-EN{
+	font-size: 12px;
+}
+.about-now{
+	width: 100%;
+	height: 40px;
+	background-color: #f1f1f1;
+	text-align: center;
+	font-size: 14px;
+	color: #525252;
+	line-height: 2.8;
+	cursor: pointer;
+}
+.about-info{
+	width: 100%;
+	height: 40px;
+	text-align: center;
+	font-size: 14px;
+	color: #525252;
+	line-height: 2.8;
+	cursor: pointer;
+}
+.about-right-head{
+	width: 720px;
+	height: 47px;
+	background-image: url("../images/about/aboutInfoHeadBG.png");
+	background-repeat: repeat-x;
+	font-size: 14px;
+	color: #525252;
+}
+.about-right-head span{
+	display: inline-block;
+	margin-left: 20px;
+	line-height: 2.8;
+}
+.about-right-info{
+	font-size: 14px;
+	color: #525252;
+	width: 680px;
+	margin: 20px auto;
+	line-height: 2;
+}
+.about-right-info span{
+	display: block;
+	text-indent: 2em;
+}

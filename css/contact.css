@@ -1,0 +1,54 @@
+.contact-container{
+	width: 980px;
+	height: 790px;
+	margin: 20px auto;
+}
+.contact-left-container{
+	width: 240px;
+	height: 100%;
+	float: left;
+}
+.contact-right-container{
+	width: 720px;
+	height: 100%;
+	margin-left: 20px;
+	background-color: #f1f1f1;
+	border-radius: 0 0 10px 10px;
+	float: left;
+}
+.contact-title{
+	font-size: 20px;
+	color: #00a0e9;
+	margin: 20px 0 17px 20px;
+}
+.contact-line{
+	width: 680px;
+	height: 1px;
+	border-top: 1px solid #525252;
+	margin-left: 20px;
+	margin-top: 2px;
+}
+.contact-name{
+	font-size: 18px;
+	color: #525252;
+	margin-left: 20px;
+	margin-top: 28px;
+}
+.contact-type{
+	font-size: 14px;
+	color: #525252;
+	margin-left: 20px;
+	margin-top: 10px;
+}
+.contact-map{
+	margin: 40px auto;
+	width: 685px;
+	height: 389px;
+}
+.contact-line2{
+	width: 680px;
+	height: 1px;
+	border-top: 1px solid #525252;
+	margin-left: 20px;
+	margin-top: 45px;
+}

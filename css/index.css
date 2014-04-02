@@ -83,6 +83,7 @@
 	line-height: 50px;
 	text-align: center;
 	float: left;
+	cursor: pointer;
 }
 .menu-contaner .selected{
 	background-image: url("../images/menuSelected.png");
