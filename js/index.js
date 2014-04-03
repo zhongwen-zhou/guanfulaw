@@ -9,8 +9,7 @@ $(function(){
 		window.location.href="contact.html";
 	});
 
-	$("#team").on('click',function(){
-		alert(0);
+	$("#team").on('click',function(){ 
 		window.location.href="team.html";
 	});
 
