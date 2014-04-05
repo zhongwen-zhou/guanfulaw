@@ -13,6 +13,14 @@ $(function(){
 		window.location.href="team.html";
 	});
 
+	$("#seveice").on('click',function(){ 
+		window.location.href="service.html";
+	});
+
+	$("#classic").on('click',function(){ 
+		window.location.href="classiccase.html";
+	});
+
 
 	$("#baowangao").on('click',function(){
 		window.location.href="baowangaolawyer.html";

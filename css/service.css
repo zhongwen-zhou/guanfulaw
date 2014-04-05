@@ -1,14 +1,14 @@
-.about-container{
+.service-container{
 	width: 980px;
 	height: 545px;
 	margin: 30px auto;
 }
-.about-left-container{
+.service-left-container{
 	width: 240px;
 	height: 100%;
 	float: left;
 }
-.about-right-container{
+.service-right-container{
 	width: 720px;
 	height: 100%;
 	margin-left: 20px;
@@ -33,7 +33,7 @@
 .left-EN{
 	font-size: 12px;
 }
-.about-info{
+.service-info{
 	width: 100%;
 	height: 40px;
 	text-align: center;
@@ -42,10 +42,10 @@
 	line-height: 2.8;
 	cursor: pointer;
 }
-.about-info.selected{
+.service-info.selected{
 	background-color: #f1f1f1;
 }
-.about-right-head{
+.service-right-head{
 	width: 720px;
 	height: 47px;
 	background-image: url("../images/about/aboutInfoHeadBG.png");
@@ -53,19 +53,32 @@
 	font-size: 14px;
 	color: #525252;
 }
-.about-right-head span{
+.service-right-head span{
 	display: inline-block;
 	margin-left: 20px;
 	line-height: 2.8;
 }
-.about-right-info{
+.service-right-info{
 	font-size: 14px;
 	color: #525252;
 	width: 680px;
 	margin: 20px auto;
 	line-height: 2;
 }
-.about-right-info span{
+.service-right-info span{
 	display: block;
 	text-indent: 2em;
+}
+.service-list{
+	margin-left: 50px;
+}
+.service-list ul li{
+	list-style: disc;
+}
+.service-process{
+	width: 680px;
+	height: 457px;
+	background-image: url("../images/process.png");
+	background-size: 100%;
+	margin-top: 10px;
 }

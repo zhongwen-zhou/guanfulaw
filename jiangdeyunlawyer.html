@@ -40,20 +40,25 @@
 
    		<div class="head-menu-container">
    			<div class="menu-contaner">
-   				<span id="home">首页</span>
-          <span id="about">观复介绍</span>
-          <span id="team" class="selected">专业团队</span>
-          <span id="seveice">高级顾问</span>
-          <span id="classic">经典案例</span>
-          <span id="contact">联系我们</span>
+   				<span id="home" class="banner-name">首页</span>
+               <span class="banner-line"><img src="images/bannerLine.jpg"></span>
+          <span id="about" class="banner-name ">观复介绍</span>
+               <!-- <span class="banner-line"><img src="images/bannerLine.jpg"></span> -->
+          <span id="team" class="banner-name selected">专业团队</span>
+          <span id="seveice" class="banner-name">高级顾问</span>
+               <span class="banner-line"><img src="images/bannerLine.jpg"></span>
+          <span id="classic" class="banner-name">经典案例</span>
+               <span class="banner-line"><img src="images/bannerLine.jpg"></span>
+          <span id="contact" class="banner-name">联系我们</span>
+               <span class="banner-line"><img src="images/bannerLine.jpg"></span>
    			</div>
    		</div>
 
-         <div class="banner-container">
-            <img src="images/banner2.jpg">
+        <div class="banner-container">
+            <img src="images/about/aboutBanner.jpg">
 
          </div>
-         <div class="banner-yinying">
+         <div class="banner-yinying" style="margin-top: -40px;">
             <img src="images/bannerBottom.png">
          </div>
 
@@ -64,7 +69,7 @@
         			<span class="left-EN">Professional Team</span>
         		</div>
         		<div><img src="images/about/aboutShadow.png"></div>
-        		<div class="chief-law">
+        		<div id="rightTitle" class="chief-law">
         			<span>首席律师</span>
         		</div>
         		<div><img src="images/about/xuxian.png"></div>
@@ -83,7 +88,7 @@
         			<span>首页>专业团队>首席律师>江德运律师</span>
         		</div>
         		<div class="team-right-info">
-        			<div class="right-title"><span>首席律师</span></div>
+        			<div  class="right-title"><span>首席律师</span></div>
 
               <div class="team-right-line"></div>
 
@@ -120,17 +125,53 @@
         	</div>
         </div>
 
-         <div class="seperate-line">
+        <!-- <div class="seperate-line">
             <img src="images/seperateLine.png">
-         </div>
+         </div> -->
 
+         <div class="links-head">
+               <span>友情链接</span>
+         </div>
+         <div class="links-container">
+            <div><img src="images/linksShadows.png"></div>
+            <div class="links">
+               <span><a href="#">最高人民法院 </a>-</span>
+               <span><a href="#">最高人民检查院 </a>-</span>
+               <span><a href="#">司法部 </a>-</span>
+               <span><a href="#">中国律师网 </a>-</span>
+               <span><a href="#">广西高级人民法院 </a>-</span>
+               <span><a href="#">南宁高级人民法院 </a>-</span>
+               <span><a href="#">南宁市中级人民法院广西司法厅 </a>-</span>
+               <span><a href="#">南宁市司法局 </a>-</span>
+               <span><a href="#">广西区律协 </a>-</span>
+               <span><a href="#">南宁市律协 </a>-</span>
+               <span><a href="#">南宁仲裁委</a></span>
+            </div>
+         </div>
          <div class="footer-container">
-            <span>© Copyright - Lawyers - www.guanfulaw.com All Rights Reserved.   观复律师事务所   免费咨询电话：0771-5670729</span>
-            <span style="margin-top:10px;">版权所有©2014 观复律师事务所 桂ICP备XZXXXXX号</span>
+            <div><img src="images/footerShadow.jpg"></div>
+            <div class="footer-info">
+               <div class="footer-image"><img src="images/gongbiao.png"></div>
+               <div class="footer-info-list">
+                  <span>版权所有©2014观复律师事务所</span>
+                  <span>地址：广西壮族自治区南宁市青秀区东葛路延长线159号景晖花园13栋062号</span>
+                  <span>电话：0771-5670729  <span style="padding-left:8px;">传真：0771-5671759</span></span>
+                  <span>投诉电话：0771-5670729  <span style="padding-left:8px;">联系人：XXX</span>  <span style="padding-left:8px;">邮箱：gxgflawfirm@163.com</span> <span style="padding-left:8px;">桂ICP备XZXXXXX号</span></span>
+               </div>
+            </div>
          </div>
 
 	</div>
 	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="js/index.js"></script>
+  <script type="text/javascript">
+    $(function(){
+
+        $("#rightTitle").on('click',function(){
+            window.location.href = "team.html";
+
+        });
+    });
+  </script>
 </body>
 
