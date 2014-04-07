@@ -82,3 +82,41 @@
 	background-size: 100%;
 	margin-top: 10px;
 }
+
+
+
+.user-image {
+	margin-bottom: 20px;
+}
+.user-info {
+	font-size: 14px;
+	color: #00a0e9;
+}
+.user-info span{
+	display: inline;
+}
+.lawyer-type span{
+	display: inline;
+}
+.user-contact span{
+	text-indent: 0em;
+}
+.lawyer-name {
+	color: #fa9c1e;
+	margin-right: 5px;
+}
+.user-work-experence-title {
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	text-indent: 0em;
+}
+.user-work-experence-info {
+	width: 680px;
+	display: block;
+	font-size: 14px;
+	text-indent: 2em;
+	margin-top: 10px;
+	color: #525252;
+	line-height: 1.8;
+}

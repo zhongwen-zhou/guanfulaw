@@ -48,13 +48,22 @@
 .head-contact{
 	text-align: right;
 	margin-top: 65px;
+	width: 243px;
+	height: 26px;
+	float: right;
 }
-.head-contact img{
+.head-contact-image{
+	width: 19px;
+	height: 26px;
+	float: left;
+}
+.head-contact-image img{
 	vertical-align: middle;
 }
 .head-contact-phonenumber{
 	display: inline-block;
 	vertical-align: middle;
+	float: right;
 }
 .head-phone-line{
 	font-size: 16px;
