@@ -1,6 +1,6 @@
 .service-container{
 	width: 980px;
-	height: 545px;
+	height: 865px;
 	margin: 30px auto;
 }
 .service-left-container{
@@ -67,7 +67,6 @@
 }
 .service-right-info span{
 	display: block;
-	text-indent: 2em;
 }
 .service-list{
 	margin-left: 50px;
@@ -104,6 +103,7 @@
 .lawyer-name {
 	color: #fa9c1e;
 	margin-right: 5px;
+	text-indent: 0em;
 }
 .user-work-experence-title {
 	display: block;

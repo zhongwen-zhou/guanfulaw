@@ -42,4 +42,8 @@ $(function(){
 		window.location.href="users/jiangyulawyer.html";
 	});
 
+	$("#baowanchao").on('click',function(){
+		window.location.href="service.html";
+	});
+
 });
