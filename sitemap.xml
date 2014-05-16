@@ -4,14 +4,50 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 <url>
   <loc>http://www.guanfulaw.com/</loc>
-  <lastmod>2014-05-15T03:28:42+00:00</lastmod>
+  <lastmod>2014-05-17</lastmod>
+</url>
+<url>
+  <loc>http://www.guanfulaw.com/about.html</loc>
+  <lastmod>2014-05-17</lastmod>
+</url>
+<url>
+  <loc>http://www.guanfulaw.com/team.html</loc>
+  <lastmod>2014-05-17</lastmod>
+</url>
+<url>
+  <loc>http://www.guanfulaw.com/service.html</loc>
+  <lastmod>2014-05-17</lastmod>
+</url>
+<url>
+  <loc>http://www.guanfulaw.com/contact.html</loc>
+  <lastmod>2014-05-17</lastmod>
 </url>
 <url>
   <loc>http://www.guanfulaw.com/classiccase.html</loc>
-  <lastmod>2014-05-15T03:28:42+00:00</lastmod>
+  <lastmod>2014-05-17</lastmod>
 </url>
+<url>
+  <loc>http://www.guanfulaw.com/users/baowangaolawyer.html</loc>
+  <lastmod>2014-05-17</lastmod>
+</url>
+<url>
+  <loc>http://www.guanfulaw.com/users/wenweilawyer.html</loc>
+  <lastmod>2014-05-17</lastmod>
+</url>
+<url>
+  <loc>http://www.guanfulaw.com/users/huangpenglawyer.html</loc>
+  <lastmod>2014-05-17</lastmod>
+</url>
+<url>
+  <loc>http://www.guanfulaw.com/users/jiangdeyunlawyer.html</loc>
+  <lastmod>2014-05-17</lastmod>
+</url>
+<url>
+  <loc>http://www.guanfulaw.com/users/jiangyulawyer.html</loc>
+  <lastmod>2014-05-17</lastmod>
+</url>
+
 </urlset>
