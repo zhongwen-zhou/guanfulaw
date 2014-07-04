@@ -15,6 +15,9 @@ set :deploy_to, '/var/www/law.com'
 set :repository, 'https://github.com/zhongwen-zhou/guanfulaw.git'
 set :branch, 'master'
 set :user, 'web'
+set :rvm_path, '/home/web/.rvm/bin/rvm'
+# set :bundle_path, '/var/www/vqiji.com.preview/bundle_gems'
+
 
 # Manually create these paths in shared/ (eg: shared/config/database.yml) in your server.
 # They will be linked in the 'deploy:link_shared_paths' step.
