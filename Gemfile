@@ -1,4 +1,5 @@
-source 'https://rubygems.org'
+# source 'https://rubygems.org'
+source 'http://mirrors.aliyun.com/rubygems/'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -26,6 +27,8 @@ gem 'spring',        group: :development
 
 gem 'mongoid'
 gem 'will_paginate'
+
+gem 'mina'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
