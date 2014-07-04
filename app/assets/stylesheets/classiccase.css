@@ -1,0 +1,100 @@
+.classic-container{
+	width: 980px;
+	height: 1200px;
+	margin: 30px auto;
+}
+.classic-left-container{
+	width: 240px;
+	height: 100%;
+	float: left;
+}
+.classic-right-container{
+	width: 720px;
+	height: 100%;
+	margin-left: 20px;
+	background-color: #f1f1f1;
+	border-radius: 0 0 10px 10px;
+	float: left;
+}
+.left-title{
+	width: 100%;
+	height: 40px;
+	background-color: #00a0e9;
+	color: #fff;
+	line-height: 2;
+}
+.left-title span{
+	display: inline-block;
+}
+.left-CN{
+	font-size: 20px;
+	padding-left: 20px;
+}
+.left-EN{
+	font-size: 12px;
+}
+.classic-info{
+	width: 100%;
+	height: 40px;
+	text-align: center;
+	font-size: 14px;
+	color: #525252;
+	line-height: 2.8;
+	cursor: pointer;
+}
+.classic-info.selected{
+	background-color: #f1f1f1;
+}
+.classic-right-head{
+	width: 720px;
+	height: 47px;
+	background-image: url("/assets/about/aboutInfoHeadBG.png");
+	background-repeat: repeat-x;
+	font-size: 14px;
+	color: #525252;
+}
+.classic-right-head span{
+	display: inline-block;
+	margin-left: 20px;
+	line-height: 2.8;
+}
+.classic-right-info{
+	font-size: 14px;
+	color: #525252;
+	width: 680px;
+	margin: 20px auto;
+	/*line-height: 1;*/
+}
+.classic-right-info span{
+	display: block;
+	text-indent: 2em;
+}
+.classic-title{
+	text-align: center;
+	font-size: 16px;
+	color: #00a0e9;
+}
+.classic-time{
+	text-align: center;
+	font-size: 14px;
+	color: #525252;
+}
+.classic-text{
+	margin-top: 10px;
+}
+.classic-line{
+	height: 1px;
+	width: 100%;
+	border-top: 1px solid black;
+	margin-top: 2px;
+}
+.classic-change span{
+	display: inline-block;
+	text-indent: 0em;
+}
+.classic-change .next{
+	color: #b6b6b6;
+}
+.article-link:hover{
+	color: #C20C0C;
+}

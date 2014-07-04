@@ -1,0 +1,88 @@
+
+        <div class="gfdynamic-container">
+        	<div class="gfdynamic-left-container">
+        		<div class="left-title">
+        			<span class="left-CN">观复动态/</span>
+        			<span class="left-EN">Guanfu Dynamic</span>
+        		</div>
+        		<div><%= image_tag "about/aboutShadow.png" %></div>
+        		<div id="gfdynamic1" class="gfdynamic-info selected" style="margin-top: -5px;">
+        			<span>我所开业典礼暨开业酒会圆满结束</span>
+        		</div>
+        		<div><%= image_tag "about/xuxian.png" %></div>
+        		<div id="gfdynamic2" class="gfdynamic-info">
+        			<span>我所江德运律师荣获“南宁市优...</span>
+        		</div>
+        		<div><%= image_tag "about/xuxian.png" %></div>
+        		<div id="gfdynamic3" class="gfdynamic-info">
+        			<span>我所包万高律师、黄鹏律应邀出席...</span>
+        		</div>
+        		<div><%= image_tag "about/xuxian.png" %></div>
+        		<div><%= image_tag "about/about.jpg" %></div>
+        	</div>
+        	<div class="gfdynamic-right-container">
+        		<div class="gfdynamic-right-head">
+        			<span>首页>观复动态>动态概况</span>
+        		</div>
+        		<div class="gfdynamic-right-info">
+        			 <div class="dynamic-title"><span>我所开业典礼暨开业酒会圆满结束</span></div>
+               <div class="dynamic-time"><span>2014-04-08</span></div>
+               <div class="dynamic-line"></div>
+               <div class="dynamic-img"><%= image_tag "dynamic/open1.jpg" %></div>
+               <div class="dynamic-desc"><span>开业典礼现场</span></div>
+               <div class="dynamic-img"><%= image_tag "dynamic/open2.jpg" %></div>
+               <div class="dynamic-desc"><span>开业典礼现场</span></div>
+               <div class="dynamic-img"><%= image_tag "dynamic/open3.jpg" %></div>
+               <div class="dynamic-desc"><span>开业酒会现场</span></div>
+               <div class="dynamic-img"><%= image_tag "dynamic/open4.jpg" %></div>
+               <div class="dynamic-desc"><span>开业酒会现场</span></div>
+        		</div>
+        	</div>
+        </div>
+<%= content_for :scripts do %>
+    $(function(){
+
+      $("#gfdynamic1").on('click',function(){
+          if($("#gfdynamic1").hasClass("selected")) {
+            return;
+          }else{
+            $(".gfdynamic-container").css("height","2400px");
+             $(".gfdynamic-right-info").empty();
+             $("#gfdynamic1").addClass("selected")
+             $("#gfdynamic2").removeClass("selected");
+             $("#gfdynamic3").removeClass("selected");
+
+             $(".gfdynamic-right-info").html("<div class='dynamic-title'><span>我所开业典礼暨开业酒会圆满结束</span></div><div class='dynamic-time'><span>2014-04-08</span></div><div class='dynamic-line'></div><div class='dynamic-img'><img src='dynamic/open1.jpg'></div><div class='dynamic-desc'><span>开业典礼现场</span></div><div class='dynamic-img'><img src='images/dynamic/open2.jpg'></div><div class='dynamic-desc'><span>开业典礼现场</span></div><div class='dynamic-img'><img src='images/dynamic/open3.jpg'></div><div class='dynamic-desc'><span>开业酒会现场</span></div><div class='dynamic-img'><img src='images/dynamic/open4.jpg'></div><div class='dynamic-desc'><span>开业酒会现场</span></div>");
+          }
+      });
+
+      $("#gfdynamic2").on('click',function(){
+          if($("#gfdynamic2").hasClass("selected")) {
+            return;
+          }else{
+            $(".gfdynamic-container").css("height","780px");
+             $(".gfdynamic-right-info").empty();
+             $("#gfdynamic1").removeClass("selected")
+             $("#gfdynamic2").addClass("selected");
+             $("#gfdynamic3").removeClass("selected");
+
+             $(".gfdynamic-right-info").html("<div class='dynamic-title'><span>我所江德运律师荣获“南宁市优秀妇女儿童维权志愿者”</span></div><div class='dynamic-time'><span>2014-04-08</span></div><div class='dynamic-line'></div><div class='dynamic-img'><img src='images/dynamic/jiangdeyunrongyu.jpg'></div>");
+          }
+      });
+
+      $("#gfdynamic3").on('click',function(){
+          if($("#gfdynamic3").hasClass("selected")) {
+            return;
+          }else{
+            $(".gfdynamic-container").css("height","780px");
+             $(".gfdynamic-right-info").empty();
+             $("#gfdynamic1").removeClass("selected")
+             $("#gfdynamic2").removeClass("selected");
+             $("#gfdynamic3").addClass("selected");
+
+             $(".gfdynamic-right-info").html("<div class='dynamic-title'><span>我所包万高律师、黄鹏律师应邀出席“广西大学第十一届女生节服饰大赛</span></div>               <div class='dynamic-time'><span>2014-04-08</span></div><div class='dynamic-line'></div> <div class='dynamic-img'><img src='images/dynamic/nvshengjie.jpg'></div>");
+          }
+      });
+
+    });
+<% end %>
