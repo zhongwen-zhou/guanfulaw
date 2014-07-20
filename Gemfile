@@ -34,6 +34,13 @@ gem 'execjs'
 
 gem 'therubyracer'
 
+
+gem "mini_magick"
+gem "carrierwave"
+gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
+
+gem 'rails_kindeditor'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

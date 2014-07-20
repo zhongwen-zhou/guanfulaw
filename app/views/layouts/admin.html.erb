@@ -13,10 +13,11 @@
    <link rel="stylesheet" type="text/css" href="css/index.css?v=1234"> -->
 
    	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	  <%= javascript_include_tag 'application' %>
+	  <%#= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 	  <%= csrf_meta_tags %>
 </head> 
-<body>
+<body style="text-align: center;">
 	<div class = "content">
    		<div class="head-color">
    		</div>
@@ -45,43 +46,11 @@
    			</div>
    		</div>
 
-   		<div class="head-menu-container">
-   			<div class="menu-contaner">
-   				<a href="/"><span id="home" class="banner-name <%= 'selected' if @path_action == 'root' %>">首页</span></a>
-   				<a href="/about"><span id="about" class="banner-name <%= 'selected' if @path_action == 'about' %>">观复介绍</span></a>
-               <a href="javascript:void(0);"><span class="banner-line"><%= image_tag('bannerLine.jpg') %></span></a>
-   				<a href="/team.html"><span id="team" class="banner-name <%= 'selected' if @path_action == 'team' %>">专业团队</span></a>
-               <span class="banner-line"><%= image_tag('bannerLine.jpg') %></span>
-   				<a href="/service.html"><span id="seveice" class="banner-name <%= 'selected' if @path_action == 'service' %>">高级顾问</span></a>
-               <span class="banner-line"><%= image_tag('bannerLine.jpg') %></span>
-   				<a href="/cases.html"><span id="classic" class="banner-name <%= 'selected' if @path_action == 'cases' %>">经典案例</span></a>
-               <span class="banner-line"><%= image_tag('bannerLine.jpg') %></span>
-   				<a href="/contact.html"><span id="contact" class="banner-name <%= 'selected' if @path_action == 'contact' %>">联系我们</span></a>
-               <span class="banner-line"><%= image_tag('bannerLine.jpg') %></span>
-   			</div>
+   		<div style="display: inline-block; min-height: 400px;">
+   		<%= yield %>
    		</div>
 
-   		<%= yield %>
-
-	     <div class="links-head">
-	           <span>友情链接</span>
-	     </div>
-	     <div class="links-container">
-	        <div><%= image_tag('linksShadows.png') %></div>
-	        <div class="links">
-	           <span><a href="http://www.court.gov.cn/" target="_blank">最高人民法院 </a>-</span>
-	           <span><a href="http://www.spp.gov.cn/" target="_blank">最高人民检察院 </a>-</span>
-	           <span><a href="http://www.moj.gov.cn/" target="_blank">司法部 </a>-</span>
-	           <span><a href="http://www.gxsf.gov.cn/" target="_blank">广西壮族自治区司法厅 </a>-</span>
-	           <span><a href="http://sf.nanning.gov.cn/" target="_blank">南宁市司法局 </a>-</span>
-	           <span><a href="http://www.gxcourt.gov.cn/" target="_blank">广西壮族自治区高级人民法院 </a>-</span>
-	           <span><a href="http://nnzy.chinacourt.org/index.shtml" target="_blank">南宁市中级人民法院 </a>-</span>
-	           <span><a href="http://www.acla.org.cn/" target="_blank">中国律师网 </a>-</span>
-	           <span><a href="http://www.gxlawyer.org.cn/index.shtml" target="_blank">广西壮族自治区律师协会 </a>-</span>
-	           <span><a href="http://www.nnslx.com/Outlook/index.aspx" target="_blank">南宁市律师协会 </a>-</span>
-	           <span><a href="http://nnzcwyh.nanning.gov.cn/" target="_blank">南宁仲裁委员会</a></span>
-	        </div>
-	     </div>
+	    
 	     <div class="footer-container">
 	        <div><%= image_tag('footerShadow.jpg') %></div>
 	        <div class="footer-info">

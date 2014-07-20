@@ -1,0 +1,20 @@
+<%= link_to '新增案情', new_admin_case_path %>
+<table>
+	<thead>
+		<tr>
+			<td>标题</td>
+			<td>作者</td>
+			<td>位置</td>
+			<td>操作</td>
+		</tr>
+	</thead>
+	<tbody>
+		<% @cases.each do |_case| %>
+			<tr>
+				<td><%= _case.title %></td>
+				<td><%= _case.author %></td>
+				<td><%= _case.index %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>

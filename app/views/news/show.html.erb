@@ -1,0 +1,128 @@
+<style type="text/css">
+  
+body
+{
+  text-align: center;
+}
+.gfdynamic-container{
+  width: 980px;
+  height: auto;
+  margin: 30px auto;
+  display: inline-block;
+}
+.gfdynamic-left-container{
+  width: 240px;
+  height: 100%;
+  float: left;
+}
+.gfdynamic-right-container{
+  width: 720px;
+  height: 100%;
+  margin-left: 20px;
+  background-color: #f1f1f1;
+  border-radius: 0 0 10px 10px;
+  float: left;
+}
+.left-title{
+  width: 100%;
+  height: 40px;
+  background-color: #00a0e9;
+  color: #fff;
+  line-height: 2;
+}
+.left-title span{
+  display: inline-block;
+}
+.left-CN{
+  font-size: 20px;
+  padding-left: 20px;
+}
+.left-EN{
+  font-size: 12px;
+}
+.gfdynamic-info{
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  font-size: 14px;
+  color: #525252;
+  line-height: 2.8;
+  cursor: pointer;
+  background-color: #fff;
+}
+.gfdynamic-info.selected{
+  background-color: #f1f1f1;
+}
+.gfdynamic-right-head{
+  width: 720px;
+  height: 47px;
+  background-image: url("/assets/about/aboutInfoHeadBG.png");
+  background-repeat: repeat-x;
+  font-size: 14px;
+  color: #525252;
+  text-align: left;
+}
+.gfdynamic-right-head span{
+  display: inline-block;
+  margin-left: 20px;
+  line-height: 2.8;
+}
+.gfdynamic-right-info{
+  font-size: 14px;
+  color: #525252;
+  width: 680px;
+  margin: 20px auto;
+  line-height: 2;
+}
+.gfdynamic-right-info span{
+  display: block;
+}
+.dynamic-title{
+  font-size: 18px;
+  text-align: center;
+}
+.dynamic-time{
+  margin-top: 10px;
+  text-align: right;
+}
+.dynamic-line{
+  border-top: 1px solid;
+  height: 1px;
+  margin-top: 10px;
+}
+.dynamic-img{
+  margin-top: 20px;
+}
+.dynamic-desc{
+  text-align: center;
+}  
+
+</style>
+
+    <div class="gfdynamic-container">
+
+          <div class="gfdynamic-left-container">
+            <div class="left-title">
+              <span class="left-CN">观复动态/</span>
+              <span class="left-EN">Guanfu Dynamic</span>
+            </div>
+            <div><%= image_tag "about/aboutShadow.png" %></div>
+            <div id="gfdynamic1" class="gfdynamic-info selected" style="margin-top: -5px;">
+              <span><%= @news.title %></span>
+            </div>
+            <div><%= image_tag "about/xuxian.png" %></div>
+            <div><%= image_tag "about/about.jpg" %></div>
+          </div>
+
+
+          <div class="gfdynamic-right-container">
+            <div class="gfdynamic-right-head">
+              <span>首页>观复动态>动态概况</span>
+            </div>
+            <div class="gfdynamic-right-info">
+               <div class="dynamic-title"><span><%= @news.title %></span></div>
+               <div class="dynamic-time"><span><%= @news.created_at.strftime('%Y-%m-%d') %></span></div>
+               <div><%= raw @news.html_content %></div>
+            </div>
+          </div>
+      </div>

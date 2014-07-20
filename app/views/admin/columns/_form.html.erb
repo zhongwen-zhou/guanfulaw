@@ -1,0 +1,35 @@
+<%= form_for([:admin, @column]) do |f| %>
+	名称：<%= f.text_field(:name) %><br/>
+	位置：<%= f.text_field(:index) %><br/>
+
+	父栏目：
+	<%= f.select :column_id, Column.top.collect { |c| [ c.name, c.id ] }, include_blank: true %><br/>
+
+	模板
+    <%= f.text_area :html_content %>
+
+	<%= f.submit %>
+<% end %>
+
+<script type="text/javascript">
+    var csrfitems = document.getElementsByName("csrfmiddlewaretoken");
+    var csrftoken = "";
+    if(csrfitems.length > 0)
+    {
+        csrftoken = csrfitems[0].value;
+    }
+         
+    var editor ;
+    KindEditor.ready(function(K) {  
+        var options = {  
+            width : '360px',  
+            height : '300px',  
+            filterMode : true,
+            uploadJson : K.undef('/kindeditor/upload/'),
+            extraFileUploadParams : {
+                csrfmiddlewaretoken:csrftoken
+            }
+       };  
+        editor = K.create('textarea', options);  
+    });                      
+</script> 

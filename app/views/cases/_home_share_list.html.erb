@@ -1,0 +1,23 @@
+
+<div class="classic-case-container">
+  <div class="container-head">
+     <span class="container-head-left">经典案例</span>
+     <a href="/cases.html"><span class="container-head-right" id="gotoClassic">查看更多></span></a>
+  </div>
+  <div><%= image_tag('linksShadows.png') %></div>
+  <div class="case-info">
+     <div class="image-info">
+     </div>
+     <div class="case-list">
+        <% @cases.each do |_case| %>
+        <div class="case">
+           <span class="case-title">
+           <%= link_to _case.title, case_path(_case) %>
+           </span>
+           <span class="case-time"><%= _case.created_at.strftime('%Y-%m-%d') %></span>
+        </div>
+        <% end %>
+     </div>
+
+  </div>
+</div>

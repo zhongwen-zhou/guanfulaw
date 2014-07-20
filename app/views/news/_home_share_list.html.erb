@@ -1,0 +1,15 @@
+<div class="dynamic-container">
+   <div class="container-head">
+      <span class="container-head-left">观复动态</span>
+      <a href="/news.html"><span class="container-head-right"  id="gotoDynamic">查看更多></span></a>
+   </div>
+   <div class="dynamic-info">
+      <% @newes.each do |news| %>
+      <div class="dynamic">
+        <a href="<%= news_path(news, format: 'html') %>">
+        <span>☆<%= news.title %> </span>
+        </a>
+      </div>
+      <% end %>
+   </div>
+</div>

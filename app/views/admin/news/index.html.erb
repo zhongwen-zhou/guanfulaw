@@ -1,0 +1,17 @@
+<%= link_to '新增动态', new_admin_case_path %>
+<table>
+	<thead>
+		<tr>
+			<td>标题</td>
+			<td>操作</td>
+		</tr>
+	</thead>
+	<tbody>
+		<% @newes.each do |news| %>
+			<tr>
+				<td><%= news.title %></td>
+				<td><%#= '内容管理', admin_news_sections_path(news) %><a href="/admin/news/<%= news.id %>/sections">内容管理</a></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>

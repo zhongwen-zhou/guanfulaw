@@ -1,0 +1,30 @@
+<div>
+	顶级栏目:
+	<% Column.top.each do |column| %>
+		<%= column.name %>
+	<% end %>
+</div>
+<%= link_to '新增栏目', new_admin_column_path, :target => 'black' %>
+<table>
+	<thead>
+		<tr>
+			<td>名称</td>
+			<td>层级</td>
+			<td>位置</td>
+			<td>操作</td>
+		</tr>
+	</thead>
+	<tbody>
+		<% @columns.each do |column| %>
+			<tr>
+				<td><%= column.name %></td>
+				<td><%= column.level %></td>
+				<td><%= column.index %></td>
+				<td>
+					<%= link_to '编辑', edit_admin_column_path(column) %>
+					<%= link_to '文章管理', admin_column_articles_path(column) %>
+				</td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>

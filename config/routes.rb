@@ -12,6 +12,21 @@ Rails.application.routes.draw do
   get 'contact' => 'welcome#contact'
   get 'dynamic' => 'welcome#dynamic'
 
+  resources :cases, :only => [:index, :show]
+  resources :news, :only => [:index, :show]
+
+  namespace :admin do
+    root 'welcome#index'
+    resources :columns do
+      resources :articles
+    end
+    resources :news do
+      resources :sections
+    end
+    resources :cases
+    resources :members
+  end
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

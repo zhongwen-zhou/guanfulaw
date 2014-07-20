@@ -1,0 +1,23 @@
+<%= link_to '新增成员', new_admin_member_path() %>
+<table>
+	<thead>
+		<tr>
+			<td>标题</td>
+			<td>作者</td>
+			<td>位置</td>
+			<td>操作</td>
+		</tr>
+	</thead>
+	<tbody>
+		<% @members.each do |member| %>
+			<tr>
+				<td><%= member.name %></td>
+				<td><%= member.title %></td>
+				<td><%= member.index %></td>
+				<td>
+					<%= link_to '编辑', edit_admin_member_path(member) %>
+				</td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>

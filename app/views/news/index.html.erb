@@ -1,0 +1,125 @@
+<style type="text/css">
+
+body
+{
+   text-align: center;
+}
+.gfdynamiclist-container{
+   width: 980px;
+   min-height: 530px;
+   margin: 30px auto;
+   display: inline-block;
+}
+.gfdynamiclist-left-container{
+   width: 240px;
+   height: 100%;
+   float: left;
+}
+.gfdynamiclist-right-container{
+   width: 720px;
+   height: 100%;
+   margin-left: 20px;
+   background-color: #f1f1f1;
+   border-radius: 0 0 10px 10px;
+   float: left;
+}
+.left-title{
+   width: 100%;
+   height: 40px;
+   background-color: #00a0e9;
+   color: #fff;
+   line-height: 2;
+}
+.left-title span{
+   display: inline-block;
+}
+.left-CN{
+   font-size: 20px;
+   padding-left: 20px;
+}
+.left-EN{
+   font-size: 12px;
+}
+.gfdynamiclist-info{
+   width: 100%;
+   height: 40px;
+   text-align: center;
+   font-size: 14px;
+   color: #525252;
+   line-height: 2.8;
+   cursor: pointer;
+   background-color: #fff;
+}
+.gfdynamiclist-info.selected{
+   background-color: #f1f1f1;
+}
+.gfdynamiclist-right-head{
+   width: 720px;
+   height: 47px;
+   background-image: url("/assets/about/aboutInfoHeadBG.png");
+   background-repeat: repeat-x;
+   font-size: 14px;
+   color: #525252;
+   text-align: left;
+}
+.gfdynamiclist-right-head span{
+   display: inline-block;
+   margin-left: 20px;
+   line-height: 2.8;
+}
+.gfdynamiclist-right-info{
+   font-size: 14px;
+   color: #525252;
+   width: 680px;
+   margin: 20px auto;
+   line-height: 2;
+   text-align: left;
+}
+.gfdynamiclist-right-info span{
+   display: inline-block;
+}
+.gfdynamic-title{
+   font-size: 16px;
+   width: 80%;
+   margin-left: 25px;
+   /*text-align: left;*/
+}
+.gfdynamic-time{
+   margin-top: 13px;
+   text-align: right;
+}
+
+
+
+   
+</style>
+
+      <div class="gfdynamiclist-container">
+         <div class="gfdynamic-left-container">
+            <div class="left-title">
+               <span class="left-CN">观复动态/</span>
+               <span class="left-EN">Guanfu Dynamic</span>
+            </div>
+            <div><%= image_tag "about/aboutShadow.png" %></div>
+            <div><%= image_tag "about/about.jpg" %></div>
+         </div>
+
+         <div class="gfdynamiclist-right-container">
+            <div class="gfdynamiclist-right-head">
+               <span>首页>观复动态>动态概况</span>
+            </div>
+            <div class="gfdynamiclist-right-info">
+              <div class="gfdynamic-list">
+
+                  <% @newes.each do |news| %>
+                  <div class="gfdynamic"><!--不用ul li  因为在mac下适配会有字体匹配问题-->
+                     <span class="gfdynamic-title"><a href="<%= news_path(news) %>">☆我所开业典礼暨开业酒会圆满结束</a></span>
+                     <span class="gfdynamic-time">2014-04-08</span>
+                  </div>
+                  <% end %>
+
+               </div>
+
+            </div>
+            </div>
+         </div>

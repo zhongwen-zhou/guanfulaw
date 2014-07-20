@@ -1,3 +1,151 @@
+<style type="text/css">
+  
+body
+{
+  text-align: center;
+}
+.team-container{
+  width: 980px;
+  height: auto;
+  margin: 30px auto;
+  display: inline-block;
+}
+.team-left-container{
+  width: 240px;
+  height: 100%;
+  float: left;
+}
+.team-right-container{
+  width: 720px;
+  height: 100%;
+  margin-left: 20px;
+  background-color: #f1f1f1;
+  border-radius: 0 0 10px 10px;
+  float: left;
+}
+.left-title{
+  width: 100%;
+  height: 40px;
+  background-color: #00a0e9;
+  color: #fff;
+  line-height: 2;
+}
+.left-title span{
+  display: inline-block;
+}
+.left-CN{
+  font-size: 20px;
+  padding-left: 20px;
+}
+.left-EN{
+  font-size: 12px;
+}
+.chief-law{
+  width: 100%;
+  height: 40px;
+  background-color: #f1f1f1;
+  text-align: center;
+  font-size: 14px;
+  color: #525252;
+  line-height: 2.8;
+  cursor: pointer;
+  margin-top: -5px;
+}
+.team-info{
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  font-size: 14px;
+  color: #525252;
+  line-height: 2.8;
+  cursor: pointer;
+}
+.team-right-head{
+  text-align: left;
+  width: 720px;
+  height: 47px;
+  background-image: url("/assets/about/aboutInfoHeadBG.png");
+  background-repeat: repeat-x;
+  font-size: 14px;
+  color: #525252;
+}
+.team-right-head span{
+  display: inline-block;
+  margin-left: 20px;
+  line-height: 2.8;
+}
+.team-right-info{
+  width: 100%;
+}
+.right-title{
+  font-size: 14px;
+  margin-top: 25px;
+  margin-left: 20px;
+  color: #00a0e9;
+  text-align: left;
+}
+.team-right-line{
+  width: 100%;
+  height: 1px;
+  border-top: 1px solid #b5b5b5;
+  margin-top: 5px;
+}
+.right-lawer-contaner{
+  width: 100%;
+  height: 250px;
+  margin-top: 20px;
+  margin-bottom: 29px;
+}
+.right-lawer-contaner img{
+  cursor: pointer;
+}
+.lawyer-one{
+  float: left;
+  margin-left: 19px;
+}
+.lawyer-two{
+  float: left;
+  margin-left: 27px;
+}
+.lawyer-three{
+  float: left;
+  margin-left: 27px;
+}
+.lawyer-four{
+  float: left;
+  margin-left: 27px;
+}
+.lawyer-info{
+  margin-top: 8px;
+  font-size: 14px;
+}
+.lawyer-name{
+  color: #fa9c1e;
+  margin-right: 5px;
+}
+.lawyer-type{
+  margin-top: 0px;
+  font-size: 14px;
+}
+.lawyer-future{
+  float: left;
+  width: 150px;
+  height: 200px;
+  background-color: gray;
+  text-align: center;
+  margin-left: 27px;
+
+}
+.lawyer-future span{
+  font-size: 14px;
+  display: block;
+  color: white;
+}
+.future-info{
+  margin-top: 80px;
+}  
+
+</style>
 
  <div class="banner-container">
     <%= image_tag "about/aboutBanner0408.jpg" %>
@@ -29,27 +177,25 @@
       <div class="team-right-line"></div>
 
       <div class="right-lawer-contaner">
+        <% @members = Member.all %>
+        <% @members[0..4].each do |member| %>
         <div class="lawyer-one">
-          <div><%= image_tag("team/baowangao.jpg", id: 'baowangao') %></div>
-          <div class="lawyer-info"><span class="lawyer-name">包万高</span><span>  律师</span></div>
-          <div class="lawyer-type"><span>高级合伙人</span><span> 观复所主任</span></div>
+          <div><%= image_tag( member.avatar_url, :width => 150 ) %></div>
+          <div class="lawyer-info"><span class="lawyer-name"><%= member.name %></span><span>  <%= member.position %></span></div>
+          <div class="lawyer-type"><span><%= member.title %></span></div>
         </div>
-        <div class="lawyer-two">
-           <div><%= image_tag("team/wenwei.jpg", id: 'wenwei') %></div>
-          <div class="lawyer-info"><span  class="lawyer-name">文伟</span><span>  律师</span></div>
-          <div class="lawyer-type"><span>高级合伙人</span></div>
+        <% end %>
+
+        <% if @members.count < 4 %>
+        <div class="lawyer-future">
+          <span class="future-info">观复团队</span>
+          <span>等待您的加入</span>
         </div>
-        <div class="lawyer-three">
-          <div><%= image_tag("team/huangpeng.jpg", id: 'huangpeng') %></div>
-          <div class="lawyer-info"><span  class="lawyer-name">黄鹏</span><span>  律师/拍卖师</span></div>
-          <div class="lawyer-type"><span>高级合伙人</span></div>
-        </div>
-        <div class="lawyer-four">
-          <div><%= image_tag("team/jiangdeyun.jpg", id: 'jiangdeyun') %></div>
-          <div class="lawyer-info"><span  class="lawyer-name">江德运</span><span>  律师</span></div>
-          <div class="lawyer-type"><span>高级合伙人</span></div>
-        </div>
+
+        <% end %>
       </div>
+
+      <% if @members.count > 4 %>
 
       <div class="team-right-line"></div>
       
@@ -58,11 +204,23 @@
           <div><%= image_tag("team/jiangyu.jpg", id: 'jiangyu') %></div>
           <div class="lawyer-info"><span class="lawyer-name">蒋玉</span><span>  律师</span></div>
         </div>
+
+
+        <% @members[5..7].each do |member| %>
+          <div class="lawyer-one">
+            <div><%= image_tag( member.avatar_url, :width => 150 ) %></div>
+            <div class="lawyer-info"><span class="lawyer-name"><%= member.name %></span><span>  <%= member.position %></span></div>
+            <div class="lawyer-type"><span><%= member.title %></span></div>
+          </div>
+        <% end %>
+
+
         <div class="lawyer-future">
           <span class="future-info">观复团队</span>
           <span>等待您的加入</span>
         </div>
       </div>
+      <% end %>
 
       <div class="team-right-line"></div>
       <div id="rightTitle" class="right-title"><span>高级顾问</span></div>

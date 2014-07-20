@@ -1,0 +1,161 @@
+<style type="text/css">
+  
+body
+{
+  text-align: center;
+}
+.classic-container{
+  width: 980px;
+  height: auto;
+  margin: 30px auto;
+  display: inline-block;
+}
+.classic-left-container{
+  width: 240px;
+  height: 100%;
+  float: left;
+}
+.classic-right-container{
+  width: 720px;
+  height: 100%;
+  margin-left: 20px;
+  background-color: #f1f1f1;
+  border-radius: 0 0 10px 10px;
+  float: left;
+}
+.left-title{
+  width: 100%;
+  height: 40px;
+  background-color: #00a0e9;
+  color: #fff;
+  line-height: 2;
+}
+.left-title span{
+  display: inline-block;
+}
+.left-CN{
+  font-size: 20px;
+  padding-left: 20px;
+}
+.left-EN{
+  font-size: 12px;
+}
+.classic-info{
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  font-size: 14px;
+  color: #525252;
+  line-height: 2.8;
+  cursor: pointer;
+}
+.classic-info.selected{
+  background-color: #f1f1f1;
+}
+.classic-right-head{
+  width: 720px;
+  height: 47px;
+  background-image: url("/assets/about/aboutInfoHeadBG.png");
+  background-repeat: repeat-x;
+  font-size: 14px;
+  color: #525252;
+  text-align: left;
+}
+.classic-right-head span{
+  display: inline-block;
+  margin-left: 20px;
+  line-height: 2.8;
+}
+.classic-right-info{
+  font-size: 14px;
+  color: #525252;
+  width: 680px;
+  margin: 20px auto;
+  text-align: left;
+  /*line-height: 1;*/
+}
+.classic-right-info span{
+  display: block;
+  text-indent: 2em;
+}
+.classic-title{
+  text-align: center;
+  font-size: 16px;
+  color: #00a0e9;
+}
+.classic-time{
+  text-align: center;
+  font-size: 14px;
+  color: #525252;
+}
+.classic-text{
+  margin-top: 10px;
+  text-align: left;
+}
+.classic-line{
+  height: 1px;
+  width: 100%;
+  border-top: 1px solid black;
+  margin-top: 2px;
+}
+.classic-change span{
+  display: inline-block;
+  text-indent: 0em;
+}
+.classic-change .next{
+  color: #b6b6b6;
+}
+.article-link:hover{
+  color: #C20C0C;
+}
+
+</style>
+
+
+
+         <div class="banner-container">
+            <%= image_tag "classic/classicase0408.jpg" %>
+
+         </div>
+         <div class="banner-yinying" style="margin-top: -40px;">
+            <%= image_tag "bannerBottom.png" %>
+         </div>
+
+
+        <div class="classic-container">
+          <div class="classic-left-container">
+            <div class="left-title">
+              <span class="left-CN">经典案例/</span>
+              <span class="left-EN">Classic Case</span>
+            </div>
+            <div><img src="/assets/classic/classic.jpg"></div>
+          </div>
+          <div class="classic-right-container">
+            <div class="classic-right-head">
+              <span>首页>经典案例>案例详情</span>
+            </div>
+            <div class="classic-right-info">
+              <div class="classic-title"><span><%= @case.title %></span></div>
+              <div class="classic-time"><span>作者：<%= @case.author %></span></div>
+              <div class="classic-line"></div>
+              <div class="classic-line"></div>
+              <div class="classic-text">
+                <%= raw @case.html_content %>
+              </div>
+              <div class="classic-line" style="margin-top:20px;"></div>
+              <div class="classic-line"></div>
+              <div class="classic-change" style="margin-top:20px;">
+                <a href="" class="article-link">
+                  <span class="next">上一篇：</span>
+                  <span>从一起娱乐场所的承包合同的签订看合同效力问题</span>
+                </a>
+              </div>
+              <div class="classic-change">
+                <a href="" class="article-link">
+                  <span class="next">下一篇：</span>
+                  <span>从一起娱乐场所的承包合同的签订看合同效力问题</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>

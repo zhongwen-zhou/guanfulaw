@@ -1,0 +1,6 @@
+<%= form_for([:admin, @news]) do |f| %>
+
+	标题：<%= f.text_field(:title) %><br/>
+
+	<%= f.submit %>
+<% end %>

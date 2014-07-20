@@ -59,6 +59,8 @@ task :deploy => :environment do
     # instance of your project.
     invoke :'git:clone'
     invoke :'deploy:link_shared_paths'
+    queue "/bin/bash --login"
+    queue "rvm use 2.1.1"
     invoke :'bundle:install'
     # invoke :'rails:db_migrate'
     # invoke :'rails:assets_precompile'

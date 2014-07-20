@@ -1,0 +1,13 @@
+<%= form_for([:admin, @member]) do |f| %>
+    姓名：<%= f.text_field(:name) %><br/>
+	职位：<%= f.text_field(:position) %><br/>
+	头衔：<%= f.text_field(:title) %><br/>
+
+	头像:
+  <p>
+    <%= f.file_field :avatar %>
+    <%= f.hidden_field :avatar_cache %>
+  </p>
+
+	<%= f.submit %>
+<% end %>

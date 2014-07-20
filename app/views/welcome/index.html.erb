@@ -29,66 +29,16 @@
           </div>
        </div>
     </div>
-    <div class="dynamic-container">
-       <div class="container-head">
-          <span class="container-head-left">观复动态</span>
-          <span class="container-head-right"  id="gotoDynamic">查看更多></span>
-       </div>
-       <div class="dynamic-info">
-          <div class="dynamic"><span>☆我所开业典礼暨开业酒会圆满结束 </span></div>
-          <div class="dynamic"><span>☆我所江德运律师荣获“南宁市优秀妇女儿童维权志愿者”</span></div>
-          <div class="dynamic"><span>☆我所包万高律师、黄鹏律师应邀出席“广西大学第十一届女生节服饰大赛”</span></div>
-       </div>
-    </div>
+
+    <%= render('news/home_share_list') %>
+
  </div>
 
- <div class="classic-case-container">
-    <div class="container-head">
-       <span class="container-head-left">经典案例</span>
-       <span class="container-head-right" id="gotoClassic">查看更多></span>
-    </div>
-    <div><%= image_tag('linksShadows.png') %></div>
-    <div class="case-info">
-       <div class="image-info">
-       </div>
-       <div class="case-list">
-          <div class="case">
-             <span class="case-title"><a href="classiccase.html">· 从一起娱乐场所的承包合同的签订看合同效力问题</a></span>
-             <span class="case-time">2014-04-08</span>
-          </div>
-          <div class="case">
-             <span class="case-title"><a href=""> </a></span>
-             <span class="case-time"></span>
-          </div>
-          <div class="case">
-             <span class="case-title"><a href=""> </a></span><span class="case-time"></span>
-          </div>
-          <div class="case">
-             <span class="case-title"><a href=""> </a></span>
-             <span class="case-time"></span></div>
-          <div class="case">
-             <span class="case-title"><a href=""> </a></span>
-             <span class="case-time"></span>
-          </div>
-          <div class="case">
-             <span class="case-title"><a href=""> </a></span>
-             <span class="case-time"></span>
-          </div>
-       </div>
-
-    </div>
- </div>
-
+<%= render('/cases/home_share_list') %>
  <% content_for :scripts do %>
        $(function(){
          $("#gotoService").on('click',function(){
             window.location.href="service.html";
-         });
-         $("#gotoClassic").on('click',function(){
-            window.location.href="classiccase.html";
-         });
-         $("#gotoDynamic").on('click',function(){
-            window.location.href="dynamic.html";
          });
          $("#server1").on('click',function(){
             if ($("#server1").hasClass("selected")) {

@@ -1,0 +1,132 @@
+<style type="text/css">
+
+body
+{
+  text-align: center;
+}
+.gfclassiclist-container{
+  width: 980px;
+  min-height: 530px;
+  margin: 30px auto;
+  display: inline-block;
+}
+.gfclassiclist-left-container{
+  width: 240px;
+  height: 100%;
+  float: left;
+}
+.gfclassiclist-right-container{
+  width: 720px;
+  height: 100%;
+  margin-left: 20px;
+  background-color: #f1f1f1;
+  border-radius: 0 0 10px 10px;
+  float: left;
+}
+.left-title{
+  width: 100%;
+  height: 40px;
+  background-color: #00a0e9;
+  color: #fff;
+  line-height: 2;
+}
+.left-title span{
+  display: inline-block;
+}
+.left-CN{
+  font-size: 20px;
+  padding-left: 20px;
+}
+.left-EN{
+  font-size: 12px;
+}
+.gfclassiclist-info{
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  font-size: 14px;
+  color: #525252;
+  line-height: 2.8;
+  cursor: pointer;
+  background-color: #fff;
+}
+.gfclassiclist-info.selected{
+  background-color: #f1f1f1;
+}
+.gfclassiclist-right-head{
+  text-align: left;
+  width: 720px;
+  height: 47px;
+  background-image: url("/assets/about/aboutInfoHeadBG.png");
+  background-repeat: repeat-x;
+  font-size: 14px;
+  color: #525252;
+}
+.gfclassiclist-right-head span{
+  display: inline-block;
+  margin-left: 20px;
+  line-height: 2.8;
+}
+.gfclassiclist-right-info{
+  font-size: 14px;
+  color: #525252;
+  width: 680px;
+  margin: 20px auto;
+  line-height: 2;
+}
+.gfclassiclist-right-info span{
+  display: inline-block;
+}
+.gfclassic{
+  height: 40px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+.gfclassic-title{
+  font-size: 16px;
+  width: 80%;
+  margin-left: 25px;
+  /*text-align: left;*/
+}
+.gfclassic-time{
+  /*margin-top: 13px;*/
+  text-align: right;
+}
+
+
+  
+
+</style>
+
+
+
+        <div class="gfclassiclist-container">
+ 
+
+
+          <div class="classic-left-container">
+            <div class="left-title">
+              <span class="left-CN">经典案例/</span>
+              <span class="left-EN">Classic Case</span>
+            </div>
+            <div><%= image_tag "classic/classic.jpg" %></div>
+          </div>
+
+
+           <div class="gfclassiclist-right-container">
+              <div class="gfclassiclist-right-head">
+                 <span>首页>经典案例>案例</span>
+              </div>
+              <div class="gfclassiclist-right-info">
+                <div class="gfclassic-list">
+                    <% @cases.each do |_case| %>
+                      <div class="gfclassic"><!--不用ul li  因为在mac下适配会有字体匹配问题-->
+                         <span class="gfclassic-title"><a href="<%= case_path(_case) %>"><%= _case.title %></a></span>
+                         <span class="gfclassic-time"><%= _case.created_at.strftime('%Y-%m-%d') %></span>
+                      </div>
+                    <% end %>
+                 </div>
+
+              </div>
+              </div>
+        </div>

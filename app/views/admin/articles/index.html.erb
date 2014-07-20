@@ -1,0 +1,23 @@
+<%= link_to '新增文章', new_admin_column_article_path(@column), :target => 'black'  %>
+<table>
+	<thead>
+		<tr>
+			<td>标题</td>
+			<td>作者</td>
+			<td>位置</td>
+			<td>操作</td>
+		</tr>
+	</thead>
+	<tbody>
+		<% @articles.each do |article| %>
+			<tr>
+				<td><%= article.title %></td>
+				<td><%= article.author %></td>
+				<td><%= article.index %></td>
+				<td>
+					<%= link_to '编辑', edit_admin_column_article_path(@column, article) %>
+				</td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>

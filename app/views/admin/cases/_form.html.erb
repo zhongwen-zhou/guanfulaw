@@ -1,0 +1,12 @@
+<%= form_for([:admin, @case]) do |f| %>
+	标题：<%= f.text_field(:title) %><br/>
+	作者：<%= f.text_field(:author) %><br/>
+	位置：<%= f.text_field(:index) %><br/>
+	
+	案情：<%= f.text_area(:an_qing) %><br>
+	裁决：<%= f.text_area(:cai_jue) %><br/>
+	评析：<%= f.text_area(:ping_xi) %><br/>
+
+
+	<%= f.submit %>
+<% end %>

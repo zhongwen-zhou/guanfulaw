@@ -1,0 +1,16 @@
+<%= link_to '新增内容', new_admin_news_section_path(@news) %>
+<table>
+	<thead>
+		<tr>
+			<td>标题</td>
+			<td>操作</td>
+		</tr>
+	</thead>
+	<tbody>
+		<% @sections.each do |section| %>
+			<tr>
+				<td><%= news.desc[0..10] %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>

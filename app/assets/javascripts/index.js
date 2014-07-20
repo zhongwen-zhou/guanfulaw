@@ -18,7 +18,7 @@ $(function(){
 	});
 
 	$("#classic").on('click',function(){ 
-		window.location.href="classiccase.html";
+		// window.location.href="classiccase.html";
 	});
 
 
