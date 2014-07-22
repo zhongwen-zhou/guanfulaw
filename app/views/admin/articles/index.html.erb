@@ -15,7 +15,8 @@
 				<td><%= article.author %></td>
 				<td><%= article.index %></td>
 				<td>
-					<%= link_to '编辑', edit_admin_column_article_path(@column, article) %>
+					<%= link_to '编辑', edit_admin_column_article_path(@column, article), target: 'black' %>
+					<%= link_to '删除', admin_column_article_path(@column, article), method: 'delete', data: { confirm: '您确定删除这篇文章么？'} %>
 				</td>
 			</tr>
 		<% end %>

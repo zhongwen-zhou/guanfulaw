@@ -25,14 +25,17 @@ module Admin
 		end
 
 		def update
-			@column = Column.find(params[:id])
-			@column.update_attributes(params.require(:column).permit(:name, :index, :level, :column_id, :html_content))
-			redirect_to admin_columns_path
+			@column = Column.find(params[:column_id])
+			@article = Article.find(params[:id])
+			@article.update_attributes(params.require(:article).permit(:title, :author, :index, :html_content))
+			redirect_to admin_column_articles_path(@column)
 		end
 
 		def destroy
-			@column = Column.find(params[:id])
-			@column.destroy
+			@column = Column.find(params[:column_id])
+			@article = Article.find(params[:id])
+			@article.destroy
+			redirect_to admin_column_articles_path(@column)
 		end
 	end
 end
