@@ -6,6 +6,7 @@ class Member
   field :title, type: String, default: ''
   field :position, type: String, default: ''
   field :index, type: Integer, default: 1
+  field :level, type: Integer, default: 1
 
   field :html_content, type: String, default: ''
 

@@ -9,24 +9,24 @@ module Admin
 		end
 
 		def create
-			@member = Member.create!(params.require(:member).permit(:title, :name, :position, :avatar, :avatar_cache))
+			@member = Member.create!(params.require(:member).permit(:title, :name, :position, :level, :avatar, :avatar_cache))
 			redirect_to admin_members_path
 		end
 
 		def edit
-			@column = Column.find(params[:column_id])
 			@member = Member.find(params[:id])
 		end
 
 		def update
-			@column = Column.find(params[:id])
-			@column.update_attributes(params.require(:column).permit(:name, :index, :level, :column_id, :html_content))
-			redirect_to admin_columns_path
+			@member = Member.find(params[:id])
+			@member.update_attributes(params.require(:member).permit(:title, :name, :position, :level, :avatar, :avatar_cache))
+			redirect_to admin_members_path
 		end
 
 		def destroy
-			@column = Column.find(params[:id])
-			@column.destroy
+			@member = Member.find(params[:id])
+			@member.destroy
+			redirect_to admin_members_path
 		end
 	end
 end

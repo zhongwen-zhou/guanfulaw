@@ -16,6 +16,8 @@
 				<td><%= member.index %></td>
 				<td>
 					<%= link_to '编辑', edit_admin_member_path(member) %>
+					<%= link_to '删除', admin_member_path(member), method: 'delete', data: { confirm: '您确定删除这个成员么？'} %>
+
 				</td>
 			</tr>
 		<% end %>

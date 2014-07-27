@@ -2,7 +2,14 @@
     姓名：<%= f.text_field(:name) %><br/>
 	职位：<%= f.text_field(:position) %><br/>
 	头衔：<%= f.text_field(:title) %><br/>
+	备注：
+	<select name="member[level]">
+		<option value="1">首席律师</option>	
+		<option value="2">高级顾问</option>	
+	</select>
+	<br/>
 
+	<br/>
 	头像:
   <p>
     <%= f.file_field :avatar %>
