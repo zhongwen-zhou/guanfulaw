@@ -178,7 +178,7 @@ body
 
       <div class="right-lawer-contaner">
         <% @members = Member.where(:level => 1) %>
-        <% @members[0..4].each do |member| %>
+        <% @members[0...4].each do |member| %>
         <div class="lawyer-one">
           <div><%= image_tag( member.avatar_url, :width => 150 ) %></div>
           <div class="lawyer-info"><span class="lawyer-name"><%= member.name %></span><span>  <%= member.position %></span></div>
@@ -200,13 +200,8 @@ body
       <div class="team-right-line"></div>
       
       <div class="right-lawer-contaner">
-        <div class="lawyer-one">
-          <div><%= image_tag("team/jiangyu.jpg", id: 'jiangyu') %></div>
-          <div class="lawyer-info"><span class="lawyer-name">蒋玉</span><span>  律师</span></div>
-        </div>
 
-
-        <% @members[5..7].each do |member| %>
+        <% @members[4...7].each do |member| %>
           <div class="lawyer-one">
             <div><%= image_tag( member.avatar_url, :width => 150 ) %></div>
             <div class="lawyer-info"><span class="lawyer-name"><%= member.name %></span><span>  <%= member.position %></span></div>
