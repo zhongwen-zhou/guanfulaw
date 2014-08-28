@@ -90,8 +90,8 @@
 
               <div class="right-user-contaner">
                 <div class="user-image"><img src="<%= @member.avatar_url %>"></div>
-                <div class="user-info"><span class="lawyer-name"><%= @member.name %></span><span>  律师</span></div>
-                <div class="lawyer-type" style="margin-left:20px;"><span><%= @member.position %></span><span> <%= @member.title %></span></div>
+                <div class="user-info"><span class="lawyer-name"><%= @member.name %></span><span>  <%= @member.position %></span></div>
+                <div class="lawyer-type" style="margin-left:20px;"><span> <%= @member.title %></span></div>
    
                 <div class="info">
                   <%= raw @member.html_content %>
