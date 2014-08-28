@@ -1,0 +1,103 @@
+<style type="text/css">
+.user-container{
+  width: 980px;
+  height: 1080px;
+  margin: 30px auto;
+}
+.user-right-container{
+  width: 720px;
+  height: 100%;
+  margin-left: 20px;
+  background-color: #f1f1f1;
+  border-radius: 0 0 10px 10px;
+  float: left;
+}
+.right-user-contaner{
+  width: 100%;
+  height: 347px;
+  margin-top: 20px;
+}
+.user-image{
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+.user-info{
+  margin-left: 20px;
+  font-size: 14px;
+  color: #00a0e9;
+}
+.user-contact{
+  
+  margin-top: 10px;
+  font-size: 14px;
+}
+.user-contact span{
+  display: inline-block;
+  margin-left: 20px;
+}
+.user-work-experence{
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.user-work-experence-title{
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+}
+.user-work-experence-info{
+  width: 680px;
+  display: block;
+  font-size: 14px;
+  text-indent: 2em;
+  margin-top: 10px;
+  color: #525252;
+  line-height: 1.8;
+}
+</style>
+
+        <div class="user-container" style="height:1180px;">
+          <div class="team-left-container">
+            <div class="left-title">
+              <span class="left-CN">专业团队/</span>
+              <span class="left-EN">Professional Team</span>
+            </div>
+            <div><%= image_tag "about/aboutShadow.png" %></div>
+            <div id="rightTitle" class="chief-law">
+              <span>首席律师</span>
+            </div>
+            <div><%= image_tag "about/xuxian.png" %></div>
+            <div class="team-info">
+              
+            </div>
+            <div><%= image_tag "about/xuxian.png" %></div>
+            <div class="team-info">
+              
+            </div>
+            <div><%= image_tag "about/xuxian.png" %></div>
+            <div><%= image_tag "about/about.jpg" %></div>
+
+          </div>
+          <div class="user-right-container">
+            <div class="team-right-head">
+              <span>首页>专业团队>首席律师>包万高律师</span>
+            </div>
+            <div class="team-right-info">
+              <div  class="right-title"><span>首席律师</span></div>
+
+              <div class="team-right-line"></div>
+
+              <div class="right-user-contaner">
+                <div class="user-image"><img src="<%= @member.avatar_url %>"></div>
+                <div class="user-info"><span class="lawyer-name"><%= @member.name %></span><span>  律师</span></div>
+                <div class="lawyer-type" style="margin-left:20px;"><span><%= @member.position %></span><span> <%= @member.title %></span></div>
+   
+                <div class="info">
+                  <%= raw @member.html_content %>
+                </div>
+                
+              </div>
+
+            </div>
+          </div>
+        </div>

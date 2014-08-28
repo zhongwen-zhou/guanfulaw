@@ -9,7 +9,7 @@ module Admin
 		end
 
 		def create
-			@member = Member.create!(params.require(:member).permit(:title, :name, :position, :level, :avatar, :avatar_cache))
+			@member = Member.create!(params.require(:member).permit(:title, :name, :position, :level, :avatar, :avatar_cache, :html_content))
 			redirect_to admin_members_path
 		end
 
@@ -19,7 +19,7 @@ module Admin
 
 		def update
 			@member = Member.find(params[:id])
-			@member.update_attributes(params.require(:member).permit(:title, :name, :position, :level, :avatar, :avatar_cache))
+			@member.update_attributes(params.require(:member).permit(:title, :name, :position, :level, :avatar, :avatar_cache, :html_content))
 			redirect_to admin_members_path
 		end
 

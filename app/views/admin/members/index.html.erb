@@ -1,4 +1,4 @@
-<%= link_to '新增成员', new_admin_member_path() %>
+<%= link_to '新增成员', new_admin_member_path(), :target => "black" %>
 <table>
 	<thead>
 		<tr>
@@ -15,7 +15,7 @@
 				<td><%= member.title %></td>
 				<td><%= member.index %></td>
 				<td>
-					<%= link_to '编辑', edit_admin_member_path(member) %>
+					<%= link_to '编辑', edit_admin_member_path(member), :target => "black" %>
 					<%= link_to '删除', admin_member_path(member), method: 'delete', data: { confirm: '您确定删除这个成员么？'} %>
 
 				</td>

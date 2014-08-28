@@ -12,6 +12,9 @@ class Member
 
 	mount_uploader :avatar, AvatarUploader
 
+  field :html_content, type: String, default: ''
+
   validates :name, presence: true
+
 
 end

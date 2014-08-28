@@ -14,6 +14,7 @@ Rails.application.routes.draw do
 
   resources :cases, :only => [:index, :show]
   resources :news, :only => [:index, :show]
+  resources :members, :only => [:index, :show]
 
   namespace :admin do
     root 'welcome#index'

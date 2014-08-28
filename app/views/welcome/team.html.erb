@@ -180,7 +180,7 @@ body
         <% @members = Member.where(:level => 1) %>
         <% @members[0...4].each do |member| %>
         <div class="lawyer-one">
-          <div><%= image_tag( member.avatar_url, :width => 150 ) %></div>
+          <div><a href="<%= member_path member %>"><%= image_tag( member.avatar_url, :width => 150 ) %></a></div>
           <div class="lawyer-info"><span class="lawyer-name"><%= member.name %></span><span>  <%= member.position %></span></div>
           <div class="lawyer-type"><span><%= member.title %></span></div>
         </div>
@@ -203,7 +203,7 @@ body
 
         <% @members[4...7].each do |member| %>
           <div class="lawyer-one">
-            <div><%= image_tag( member.avatar_url, :width => 150 ) %></div>
+            <div><a href="<%= member_path member %>"><%= image_tag( member.avatar_url, :width => 150 ) %></a></div>
             <div class="lawyer-info"><span class="lawyer-name"><%= member.name %></span><span>  <%= member.position %></span></div>
             <div class="lawyer-type"><span><%= member.title %></span></div>
           </div>
