@@ -1,9 +1,26 @@
-<%= link_to '新增成员', new_admin_member_path(), :target => "black" %>
-<table>
+
+<style type="text/css">
+	table{
+		background-color: black;
+	}
+	td{
+		background-color: white;
+		font-size: 16px;
+	}
+	thead td
+	{
+		font-size: 22px;
+	}
+</style>
+
+<!--begin-->
+   		<div style="display: inline-block; min-height: 400px;min-width: 640px;">
+   		<a href="<%= new_admin_member_path %>" target="black" style="font-size: 18px;font-weight: bold;border: 1px solid;background: lightgoldenrodyellow;">新增成员</a>
+<table style="font-size: 22px;margin-top: 10px;width:100%;text-align: center;" border="0" cellspacing="1" cellpadding="0">
 	<thead>
 		<tr>
-			<td>标题</td>
-			<td>作者</td>
+			<td>名字</td>
+			<td>头衔</td>
 			<td>位置</td>
 			<td>操作</td>
 		</tr>

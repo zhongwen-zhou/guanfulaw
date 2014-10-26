@@ -1,3 +1,13 @@
+<style type="text/css">
+	table{
+		background-color: black;
+	}
+	td{
+		background-color: white;
+	}
+</style>
+
+<% if false %>
 <div>
 	顶级栏目:
 	<% Column.top.each do |column| %>
@@ -28,3 +38,44 @@
 		<% end %>
 	</tbody>
 </table>
+<% end %>
+
+
+
+
+<!--begin-->
+<div style="display: inline-block;min-height: 400px;text-align: center;min-width: 640px;">
+	<div style="font-size: 33px;font-weight: bold;">
+		顶级栏目:
+		动态
+		案例
+	</div>
+	<a href="http://www.guanfulaw.com/admin/columns/new" target="black" style="font-size: 22px;display: inline-block;margin-top: 10px;width:100%;">新增顶级栏目</a>
+	<table style="font-size: 22px;margin-top: 10px;width:100%;text-align: center;" border="0" cellspacing="1" cellpadding="0">
+		<thead>
+			<tr>
+				<td>名称</td>
+				<td>层级</td>
+				<td>位置</td>
+				<td>编辑</td>
+				<td>管理</td>
+			</tr>
+		</thead>
+		<tbody>
+			<% @columns.each do |column| %>
+				<tr>
+					<td><%= column.name %></td>
+					<td><%= column.level %></td>
+					<td><%= column.index %></td>
+					<td>
+						<%= link_to '编辑', edit_admin_column_path(column) %>
+					</td>
+					<td>
+						<%= link_to '文章管理', admin_column_articles_path(column) %>
+					</td>
+				</tr>
+			<% end %>
+		</tbody>
+	</table>
+</div>
+<!-- end-->

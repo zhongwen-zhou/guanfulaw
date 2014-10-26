@@ -1,13 +1,15 @@
+<div style="display: inline-block; min-height: 500px;">
 <%= form_for([:admin, @column, @article]) do |f| %>
     标题：<%= f.text_field(:title) %><br/>
-	作者：<%= f.text_field(:author) %><br/>
-	位置：<%= f.text_field(:index) %><br/>
+    作者：<%= f.text_field(:author) %><br/>
+    位置：<%= f.text_field(:index) %><br/>
 
-	内容:
-    <%= f.text_area :html_content %>
+    内容:
+    <%= f.text_area :html_content, rows: 60 %>
 
-	<%= f.submit %>
+    <%= f.submit '确定' %>
 <% end %>
+</div>
 
 <script type="text/javascript">
     var csrfitems = document.getElementsByName("csrfmiddlewaretoken");
@@ -21,7 +23,7 @@
     KindEditor.ready(function(K) {  
         var options = {  
             width : '360px',  
-            height : '300px',  
+            height : '500px',  
             filterMode : true,
             uploadJson : K.undef('/kindeditor/upload/'),
             extraFileUploadParams : {
