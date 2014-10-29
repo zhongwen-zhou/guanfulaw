@@ -113,8 +113,8 @@ body
 
                   <% @newes.each do |news| %>
                   <div class="gfdynamic"><!--不用ul li  因为在mac下适配会有字体匹配问题-->
-                     <span class="gfdynamic-title"><a href="<%= news_path(news) %>">☆我所开业典礼暨开业酒会圆满结束</a></span>
-                     <span class="gfdynamic-time">2014-04-08</span>
+                     <span class="gfdynamic-title"><a href="<%= news_path(news) %>">☆<%= news.title %></a></span>
+                     <span class="gfdynamic-time"><%= news.created_at.strftime('%Y-%m-%d') %></span>
                   </div>
                   <% end %>
 
