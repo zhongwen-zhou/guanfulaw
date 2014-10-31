@@ -31,7 +31,7 @@
 				<td><%= column.level %></td>
 				<td><%= column.index %></td>
 				<td>
-					<%= link_to '编辑', edit_admin_column_path(column) %>
+					<%= link_to '编辑', edit_admin_column_path(column), :target => 'black' %>
 					<%= link_to '文章管理', admin_column_articles_path(column) %>
 				</td>
 			</tr>
@@ -68,7 +68,7 @@
 					<td><%= column.level %></td>
 					<td><%= column.index %></td>
 					<td>
-						<%= link_to '编辑', edit_admin_column_path(column) %>
+						<%= link_to '编辑', edit_admin_column_path(column), :target => 'black' %>
 					</td>
 					<td>
 						<%= link_to '文章管理', admin_column_articles_path(column) %>

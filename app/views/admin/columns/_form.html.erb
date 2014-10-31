@@ -6,7 +6,9 @@
 	<%= f.select :column_id, Column.top.collect { |c| [ c.name, c.id ] }, include_blank: true %><br/>
 
 	模板
+    <div style="margin-left:31%;">
     <%= f.text_area :html_content %>
+    </div>
 
 	<%= f.submit '确定' %>
 <% end %>

@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+
+.menu-contaner a:visited {
+ color: #fff;
+ text-decoration: none;
+}
