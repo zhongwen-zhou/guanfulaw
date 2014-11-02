@@ -178,15 +178,15 @@ body
 
       <div class="right-lawer-contaner">
         <% @members = Member.where(:level => 1) %>
-        <% @members[0...4].each do |member| %>
+        <% @members[0...3].each do |member| %>
         <div class="lawyer-one">
-          <div><a href="<%= member_path member %>"><%= image_tag( member.avatar_url, :width => 150 ) %></a></div>
+          <div><a href="<%= member_path member %>"><%= image_tag( member.avatar_url, :width => 150, :height => 200 ) %></a></div>
           <div class="lawyer-info"><span class="lawyer-name"><%= member.name %></span><span>  <%= member.position %></span></div>
           <div class="lawyer-type"><span><%= member.title %></span></div>
         </div>
         <% end %>
 
-        <% if @members.count < 4 %>
+        <% if @members.count < 3 %>
         <div class="lawyer-future">
           <span class="future-info">观复团队</span>
           <span>等待您的加入</span>
@@ -201,19 +201,19 @@ body
       
       <div class="right-lawer-contaner">
 
-        <% @members[4...7].each do |member| %>
+        <% @members[3...6].each do |member| %>
           <div class="lawyer-one">
-            <div><a href="<%= member_path member %>"><%= image_tag( member.avatar_url, :width => 150 ) %></a></div>
+            <div><a href="<%= member_path member %>"><%= image_tag( member.avatar_url, :width => 150, :height => 200 ) %></a></div>
             <div class="lawyer-info"><span class="lawyer-name"><%= member.name %></span><span>  <%= member.position %></span></div>
             <div class="lawyer-type"><span><%= member.title %></span></div>
           </div>
         <% end %>
 
 
-        <div class="lawyer-future">
+        <!-- <div class="lawyer-future">
           <span class="future-info">观复团队</span>
           <span>等待您的加入</span>
-        </div>
+        </div> -->
       </div>
       <% end %>
 
