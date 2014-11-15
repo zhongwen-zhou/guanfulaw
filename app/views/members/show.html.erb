@@ -56,6 +56,7 @@
 }
 </style>
 
+<% _title = @member.level == 1 ? '首席律师' : '高级顾问' %>
         <div class="user-container" style="height:1180px;">
           <div class="team-left-container">
             <div class="left-title">
@@ -66,10 +67,10 @@
           </div>
           <div class="user-right-container">
             <div class="team-right-head">
-              <span>首页>专业团队>首席律师><%= @member.name %>律师</span>
+              <span>首页>专业团队><%= _title %>><%= @member.name %>律师</span>
             </div>
             <div class="team-right-info">
-              <div  class="right-title"><span>首席律师</span></div>
+              <div  class="right-title"><span><%= _title %></span></div>
 
               <div class="team-right-line"></div>
 

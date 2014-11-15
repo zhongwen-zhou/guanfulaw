@@ -211,12 +211,43 @@ body
       <div class="team-right-line"></div>
       <div id="rightTitle" class="right-title"><span>高级顾问</span></div>
 
+      <% if false %>
       <div class="right-lawer-contaner">
         <div class="lawyer-one">
           <div><a href="/service.html" ><%= image_tag("team/baowanchao.jpg", width: 150) %></a></div>
           <div class="lawyer-info"><span class="lawyer-name">包万超</span><span>  教授/博士生导师</span></div>
         </div>
       </div>
+      <% end %>
+
+
+      <% 
+        @members = Member.where(:level => 2) 
+        m_count = @members.count
+        t_count = m_count + 1
+        _line_count = t_count / 3
+        if (t_count%3 == 0)
+        else
+          _line_count += 1
+        end
+      %>
+
+
+      <% _line_count.times do |_line_index| %>
+
+        <div class="team-right-line"></div>
+
+        <div class="right-lawer-contaner">
+          <% @members[(_line_index*3)...(_line_index+1)*3].each do |member| %>
+          <div class="lawyer-one">
+            <div><a href="<%= member_path member %>"><%= image_tag( member.avatar_url, :width => 150, :height => 200 ) %></a></div>
+            <div class="lawyer-info"><span class="lawyer-name"><%= member.name %></span><span>  <%= member.position %></span></div>
+            <div class="lawyer-type"><span><%= member.title %></span></div>
+          </div>
+          <% end %>
+        </div>
+
+      <% end %>      
 		</div>
 	</div>
 </div>
