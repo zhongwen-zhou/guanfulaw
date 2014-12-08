@@ -1,6 +1,6 @@
 .user-container{
 	width: 980px;
-	height: 1080px;
+	/*height: 1080px;*/
 	margin: 30px auto;
 }
 .user-right-container{
@@ -13,7 +13,7 @@
 }
 .right-user-contaner{
 	width: 100%;
-	height: 347px;
+	/*height: 347px;*/
 	margin-top: 20px;
 }
 .user-image{
